@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad Aamir - Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    /* Matte Graphite Black Background */
+    body {
+      background: linear-gradient(135deg, #18191c 0%, #08080a 100%);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bg-icons-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .bg-icon {
+      position: absolute;
+      opacity: 0.25;
+      animation: floatAnimation 12s infinite linear;
+      filter: drop-shadow(0 0 8px rgba(255,255,255,0.2));
+    }
+
+    .bg-icon.wa {
+      color: #25D366;
+      font-size: 32px;
+    }
+
+    .bg-icon.insta {
+      background: -webkit-linear-gradient(#f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 34px;
+    }
+
+    .bg-icon.call {
+      color: #ffd700;
+      font-size: 28px;
+    }
+
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(110vh) rotate(0deg) scale(0.8);
+        opacity: 0;
+      }
+      20% { opacity: 0.35; }
+      80% { opacity: 0.35; }
+      100% {
+        transform: translateY(-10vh) rotate(360deg) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 215, 0, 0.25);
+      padding: 35px 25px;
+      border-radius: 25px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+      text-align: center;
+      max-width: 380px;
+      width: 100%;
+    }
+
+    .heading {
+      color: #ffd700;
+      font-size: 26px;
+      margin-top: 0;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    }
+
+    .typing-container {
+      color: #38bdf8;
+      font-size: 16px;
+      font-weight: 600;
+      min-height: 24px;
+      margin-bottom: 20px;
+    }
+
+    .typing-text::after {
+      content: '|';
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .details-box {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 15px;
+      padding: 15px;
+      margin-bottom: 25px;
+      border: 1px solid rgba(255, 215, 0, 0.1);
+    }
+
+    .details {
+      color: #f1f5f9;
+      font-size: 16px;
+      line-height: 2;
+      margin: 0;
+    }
+
+    .details span {
+      color: #ffd700;
+      font-weight: bold;
+    }
+
+    .btn {
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 15px 0;
+      letter-spacing: 0.8px;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:active { transform: scale(0.95); }
+
+    .btn-call {
+      background: linear-gradient(45deg, #d4af37, #f3e5ab);
+      color: #000;
+      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(45deg, #11998e, #38ef7d);
+      box-shadow: 0 8px 20px rgba(56, 239, 125, 0.3);
+    }
+
+    .btn-instagram {
+      background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+      box-shadow: 0 8px 20px rgba(253, 29, 29, 0.35);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-icons-container" id="iconBox"></div>
+
+  <div class="card">
+    <h1 class="heading">✨ WELCOME ✨</h1>
+    
+    <div class="typing-container">
+      <span class="typing-text" id="typewriter"></span>
+    </div>
+
+    <div class="details-box">
+      <p class="details">
+        Naam: <span>Mohammad Aamir</span><br>
+        Mobile: <span>8080008272</span><br>
+        ID: <span>@aj_brand_____43</span>
+      </p>
+    </div>
+
+    <div>
+      <a href="tel:8080008272" class="btn btn-call"><i class="fa-solid fa-phone"></i> Direct Call</a>
+      <a href="https://wa.me/918080008272" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Chat</a>
+      <a href="https://www.instagram.com/aj_brand_____43/" class="btn btn-instagram"><i class="fa-brands fa-instagram"></i> Instagram Profile</a>
+    </div>
+  </div>
+
+  <script>
+    const words = ["Digital Profile", "Brand Owner", "Connect With Me!"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById("typewriter");
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      if (isDeleting) {
+        typingElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let typeSpeed = isDeleting ? 50 : 100;
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        typeSpeed = 1500;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        typeSpeed = 500;
+      }
+
+      setTimeout(typeEffect, typeSpeed);
+    }
+    document.addEventListener("DOMContentLoaded", typeEffect);
+
+    const iconBox = document.getElementById('iconBox');
+    const icons = [
+      { class: 'fa-brands fa-whatsapp wa' },
+      { class: 'fa-brands fa-instagram insta' },
+      { class: 'fa-solid fa-phone call' }
+    ];
+
+    for (let i = 0; i < 20; i++) {
+      const iconTag = document.createElement('i');
+      const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+      iconTag.className = `bg-icon ${randomIcon.class}`;
+      iconTag.style.left = `${Math.random() * 95}%`;
+      iconTag.style.animationDuration = `${7 + Math.random() * 8}s`;
+      iconTag.style.animationDelay = `${Math.random() * 5}s`;
+      iconBox.appendChild(iconTag);
+    }
+  </script>
+
+</body>
+</html>
